@@ -4,33 +4,78 @@
   <meta charset="UTF-8">
   <title>Deal Hot Shopee</title>
   <style>
-    body { font-family: Arial; max-width: 700px; margin: auto; padding: 20px; }
-    .product { border: 1px solid #ccc; padding: 15px; margin: 20px 0; border-radius: 8px; }
-    .product img { max-width: 100%; border-radius: 6px; }
-    .btn { display: inline-block; margin-top: 10px; padding: 10px 15px; background: orange; color: white; text-decoration: none; border-radius: 5px; }
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .product {
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      background: #fff;
+    }
+
+    .product img {
+      max-width: 100%;
+      border-radius: 6px;
+      height: auto;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: orange;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
   <h1>Top các sản phẩm deal hot giá hời của Shopee</h1>
 
-  <div class="product">
-    <h2>Áo babby doll siêu xinh /h2>
-    <img src="https://down-ws-vn.img.susercontent.com/vn-11134207-7ra0g-m73ov8fzzarcce.webp" alt="chuot">
-    <p>Giá rẻ, phối với quần ống rộng, quần jeans đùi</p>
-    <a class="btn" href="https://s.shopee.vn/1LTUAJ5YRf" target="_blank">Mua ngay trên Shopee</a>
-  </div>
+  <div class="grid">
+    <!-- Sản phẩm 1 -->
+    <div class="product">
+      <h2>Áo babby doll siêu xinh</h2>
+      <img src="https://down-ws-vn.img.susercontent.com/vn-11134207-7ra0g-m73ov8fzzarcce.webp" alt="chuot">
+      <p>Giá rẻ, phối với quần ống rộng, quần jeans đùi</p>
+      <a class="btn" href="https://s.shopee.vn/1LTUAJ5YRf" target="_blank">Mua ngay trên Shopee</a>
+    </div>
 
-  <div class="product">
-    <h2>Quần kaki xếp ly nữ ống rộng </h2>
-    <img src="https://down-ws-vn.img.susercontent.com/vn-11134207-7ras8-m4pusphss2bza7.webp" alt="Giày trắng">
-    <p>Đẹp,dễ phối đồ, unisex</p>
-    <a class="btn" href="https://s.shopee.vn/1LTUBEHWMt" target="_blank">Mua ngay trên Shopee</a>
-  </div>
-  <div class="product">
-    <h2>Áo thun ôm body nữ </h2>
-    <img src="https://down-ws-vn.img.susercontent.com/vn-11134207-7ra0g-m6rdjb9iu8bl5e.webp" alt="Ba lô">
-    <p>Thiết kế đẹp ôm body tôn dáng </p>
-    <a class="btn" href="https://s.shopee.vn/10qdmlkIQn" target="_blank">Mua ngay trên Shopee</a>
+    <!-- Sản phẩm 2 -->
+    <div class="product">
+      <h2>Quần kaki xếp ly nữ ống rộng</h2>
+      <img src="https://down-ws-vn.img.susercontent.com/vn-11134207-7ras8-m4pusphss2bza7.webp" alt="Quần kaki">
+      <p>Đẹp, dễ phối đồ, unisex</p>
+      <a class="btn" href="https://s.shopee.vn/1LTUBEHWMt" target="_blank">Mua ngay trên Shopee</a>
+    </div>
+
+    <!-- Sản phẩm 3 -->
+    <div class="product">
+      <h2>Áo thun ôm body nữ</h2>
+      <img src="https://down-ws-vn.img.susercontent.com/vn-11134207-7ra0g-m6rdjb9iu8bl5e.webp" alt="Áo thun ôm body">
+      <p>Thiết kế đẹp ôm body tôn dáng</p>
+      <a class="btn" href="https://s.shopee.vn/10qdmlkIQn" target="_blank">Mua ngay trên Shopee</a>
+    </div>
   </div>
 </body>
 </html>
