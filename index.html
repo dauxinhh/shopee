@@ -17,14 +17,14 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(10, 1fr); /* 10 cột ngang */
+      grid-template-columns: repeat(10, 1fr);
       gap: 10px;
       justify-items: center;
     }
 
     .product {
       width: 100%;
-      max-width: 150px; /* gọn trong 10 cột */
+      max-width: 150px;
       border: 1px solid #ccc;
       padding: 10px;
       border-radius: 6px;
@@ -60,35 +60,56 @@
 </head>
 <body>
   <h1>Các sản phẩm deal hot của Shopee</h1>
+  <div class="grid" id="productGrid"></div>
 
-  <div class="grid">
-    <div class="product">
-      <h2>Áo babby doll</h2>
-      <img src="https://down-ws-vn.img.susercontent.com/vn-11134207-7ra0g-m73ov8fzzarcce.webp" alt="">
-      <a class="btn" href="https://s.shopee.vn/1LTUAJ5YRf" target="_blank">Mua</a>
-    </div>
-    <div class="product">
-      <h2>Quần kaki nữ</h2>
-      <img src="https://down-ws-vn.img.susercontent.com/vn-11134207-7ras8-m4pusphss2bza7.webp" alt="">
-      <a class="btn" href="https://s.shopee.vn/1LTUBEHWMt" target="_blank">Mua</a>
-    </div>
-    <div class="product">
-      <h2>Áo thun ôm</h2>
-      <img src="https://down-ws-vn.img.susercontent.com/vn-11134207-7ra0g-m6rdjb9iu8bl5e.webp" alt="">
-      <a class="btn" href="https://s.shopee.vn/10qdmlkIQn" target="_blank">Mua</a>
-    </div>
-    <div class="product">
-      <h2>Set áo đi biển</h2>
-      <img src="https://down-bs-vn.img.susercontent.com/sg-11134201-7rdvz-lzzdrkvwfh42af.webp" alt="">
-      <a class="btn" href="https://s.shopee.vn/800ti7HQQc" target="_blank">Mua</a>
-    </div>
-    <div class="product">
-      <h2>Váy jean chữ A</h2>
-      <img src="https://down-bs-vn.img.susercontent.com/vn-11134207-7r98o-lxj3fm43ybizfa.webp" alt="">
-      <a class="btn" href="https://s.shopee.vn/8AKJuavmOy" target="_blank">Mua</a>
-    </div>
-    <!-- Thêm sản phẩm nữa tùy ý -->
-  </div>
+  <script>
+    // Danh sách sản phẩm: tên, hình ảnh, link
+    const products = [
+      {
+        name: "Áo babby doll",
+        image: "https://down-ws-vn.img.susercontent.com/vn-11134207-7ra0g-m73ov8fzzarcce.webp",
+        link: "https://s.shopee.vn/1LTUAJ5YRf"
+      },
+      {
+        name: "Quần kaki nữ",
+        image: "https://down-ws-vn.img.susercontent.com/vn-11134207-7ras8-m4pusphss2bza7.webp",
+        link: "https://s.shopee.vn/1LTUBEHWMt"
+      },
+      {
+        name: "Áo thun ôm",
+        image: "https://down-ws-vn.img.susercontent.com/vn-11134207-7ra0g-m6rdjb9iu8bl5e.webp",
+        link: "https://s.shopee.vn/10qdmlkIQn"
+      },
+      {
+        name: "Set áo đi biển",
+        image: "https://down-bs-vn.img.susercontent.com/sg-11134201-7rdvz-lzzdrkvwfh42af.webp",
+        link: "https://s.shopee.vn/800ti7HQQc"
+      },
+      {
+        name: "Váy jean chữ A",
+        image: "https://down-bs-vn.img.susercontent.com/vn-11134207-7r98o-lxj3fm43ybizfa.webp",
+        link: "https://s.shopee.vn/8AKJuavmOy"
+      }
+      {
+        name: "Bikini Đi Biển 1 mảnh Swimsuit Đầm Hai dây Nữ",
+        image: "https://down-bs-vn.img.susercontent.com/vn-11134207-7r98o-lx80r2zovrvdbc.webp",
+        link: "https://s.shopee.vn/708MXbj6Aq"
+      }
+      // 👉 Bạn chỉ cần thêm sản phẩm mới ở đây
+    ];
+
+    const container = document.getElementById("productGrid");
+
+    products.forEach(p => {
+      const div = document.createElement("div");
+      div.className = "product";
+      div.innerHTML = `
+        <h2>${p.name}</h2>
+        <img src="${p.image}" alt="${p.name}">
+        <a class="btn" href="${p.link}" target="_blank">Mua</a>
+      `;
+      container.appendChild(div);
+    });
+  </script>
 </body>
 </html>
-
